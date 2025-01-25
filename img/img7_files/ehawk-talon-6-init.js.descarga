@@ -1,0 +1,77 @@
+//Must be set as a global variable
+const eHawkTalonSettings = {
+	cookie: {
+		SameSite: 'Strict',
+		Secure: true,
+		Path: '/',
+	},
+	bind: {
+		OutId: 'talon6',
+	},
+	//autoLoad: false,
+};
+
+// Ehawk execution script
+function createEhawkTextarea() {
+	const ehawkTextArea = document.createElement( 'textarea' );
+	ehawkTextArea.id = 'talon6';
+	ehawkTextArea.value = '{"version": 6, "status": -1}';
+	ehawkTextArea.rows = 10;
+	ehawkTextArea.cols = 100;
+	ehawkTextArea.style.display = 'none';
+	ehawkTextArea.classList.add( 'none' );
+	document.body.appendChild( ehawkTextArea );
+}
+// load talon script and return promise when done
+const loadScript = ( src ) => new Promise( ( resolve ) => {
+	const script = document.createElement( 'script' );
+	script.src = src;
+	script.addEventListener( 'load', resolve );
+	document.head.appendChild( script );
+} );
+// After talon runs, copy fingerprint value to all fields with the name of salmon
+function populateSalmons( talonValue ) {
+	const salmons = document.querySelectorAll( 'input[name="salmon"]' );
+	if ( salmons ) {
+		salmons.forEach( ( field ) => {
+			field.value = talonValue;
+		} );
+	}
+}
+
+async function execTalon() {
+	let host = 'https://www.activecampaign.com';
+	createEhawkTextarea();
+	if ( location.hostname !== 'www.activecampaign.com' ) {
+		host = 'https://marketing.staging.app-us1.com';
+	}
+	const loadingScript = loadScript( host + '/wp-content/themes/activecampaign/assets/js/ehawk-talon-6.js' );
+	await loadingScript;
+	//after script has loaded, run talon function
+	await Talon.eHawkTalon();
+	const maxAttempts = 50; // ~5 seconds
+	let count = 0;
+	//check that ehawk is fully initialized (and is not -2 status)
+	const ehawkInitCheck = setInterval( () => {
+		++count;
+		const tal = document.getElementById( 'talon6' );
+		if ( tal && tal.value ) {
+			try {
+				const parsedTalon = JSON.parse( tal.value );
+				if ( parsedTalon ) {
+					if ( parsedTalon.status !== -2 ) {
+						populateSalmons( tal.value );
+						clearInterval( ehawkInitCheck );
+					}
+				}
+				if ( count >= maxAttempts ) {
+					console.warn( 'eHawk Talon did not initialize' );
+					clearInterval( ehawkInitCheck );
+				}
+			} catch ( e ) {
+				console.warn( 'Error Parsing Talon' );
+			}
+		}
+	}, 100 );
+}
+execTalon();
