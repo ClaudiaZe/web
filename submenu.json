@@ -1,0 +1,21 @@
+{
+    "submenuInicio": [
+      {
+        "nombre": "Descripción del simulador de planificación de eventos",
+        "enlace": "/productos/electronica"
+      },
+      {
+        "nombre": "Objetivo de la herramienta",
+        "enlace": "/productos/ropa"
+      },
+      {
+        "nombre": "¿Por qué es importante planificar bien un evento empresarial?",
+        "enlace": "/productos/accesorios"
+      },
+      {
+        "nombre": "preguntas",
+        "enlace": "/productos/accesorios"
+      }
+    ]
+   
+  }

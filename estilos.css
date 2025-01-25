@@ -1,0 +1,144 @@
+body {
+ font-family: Arial, sans-serif;
+ margin: 0;
+ padding: 0;
+ background-color: #f0f0f0;
+}
+
+header {
+ background-color: #333;
+ color: #fff;
+ padding: 20px;
+ text-align: center;
+}
+
+nav {
+ background-color: #444;
+ padding: 10px;
+ text-align: center;
+}
+
+nav ul {
+ list-style: none;
+ margin: 0;
+ padding: 0;
+}
+
+nav li {
+ display: inline-block;
+ margin-right: 20px;
+}
+
+nav a {
+ color: #fff;
+ text-decoration: none;
+}
+
+main {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ padding: 20px;
+}
+
+section {
+ background-color: #fff;
+ padding: 20px;
+ border: 1px solid #ddd;
+ box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+ color: #f10707;
+}
+
+.botones {
+ margin-top: 20px;
+}
+
+.btn-azul {
+ background-color: #007bff;
+ color: #fff;
+ padding: 10px 20px;
+ border: none;
+ border-radius: 5px;
+ cursor: pointer;
+}
+
+.btn-verde {
+ background-color: #2ecc71;
+ color: #fff;
+ padding: 10px 20px;
+ border: none;
+ border-radius: 5px;
+ cursor: pointer;
+}
+
+.btn-rojo {
+ background-color: #e74c3c;
+ color: #fff;
+ padding: 10px 20px;
+ border: none;
+ border-radius: 5px;
+ cursor: pointer;
+}
+
+footer {
+ background-color: #333;
+ color: #fff;
+ padding: 10px;
+ text-align: center;
+ clear: both;
+}
+
+
+body {
+    background-image: url('img/img3.jpg');
+    background-size: cover;
+    background-position: center;
+    }
+
+    header {
+        background-image: url('img/img2.jpg');
+        background-size: cover;
+        background-position: center;
+        }
+
+
+
+        #eventos {
+            background-color: #f0f0f0;
+            padding: 20px;
+           }
+           
+           .evento {
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ddd;
+            margin-bottom: 20px;
+           }
+           
+           .evento h3 {
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 0;
+           }
+           
+           .evento p {
+            font-size: 14px;
+            margin-bottom: 10px;
+           }
+           
+           .evento button {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+           }
+           
+           .evento button:hover {
+            background-color: #3e8e41;
+           }
+       

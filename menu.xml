@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menu>
+    <item>
+        <nombre>Inicio</nombre>
+        <link>principal.html</link>
+    </item>
+
+    <item>
+        <nombre>Formulario de Registro del Evento</nombre>
+        <link>eventos.html</link>
+    </item>
+
+    <item>
+        <nombre>Planificacion del Evento</nombre>
+        <link>clientes.html</link>
+    </item>
+
+    <item>
+        <nombre>Recomendaciones</nombre>
+        <link>workshops.html</link>
+    </item>
+    
+    <item>
+        <nombre>Extras</nombre>
+        <link>planificacioneventos.html</link>
+    </item>
+
+    <item>
+        <nombre>FAQ</nombre>
+        <link>blog.html</link>
+    </item>
+
+    <item>
+        <nombre>Contacto</nombre>
+        <link>contacto.html</link>
+    </item>
+
+</menu>
+
+
+
+
+
+
+
+

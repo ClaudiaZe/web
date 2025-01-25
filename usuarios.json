@@ -1,0 +1,35 @@
+[
+  {
+    "id": 1,
+    "nombres": "Claudia",
+    "apellidos": "Zelada",
+    "email": "adminClaudia@gmail.com",
+    "password": "Claudiad123",
+    "rol": "administrador"
+  },
+
+  {
+    "id": 2,
+    "nombre": "Cristian",
+    "apellidos": "Pinto",
+    "email": "clienteCristian@gmail.com",
+    "password": "Cristian123",
+    "rol": "cliente"
+  },
+  {
+    "id": 3,
+    "nombre": "Sara",
+    "apellidos": "Cardernas",
+    "email": "clienteSara@gmail.com",
+    "password": "Sarad123",
+    "rol": "cliente"
+  },
+  {
+    "id": 4,
+    "nombre": "Nestor",
+    "apellidos": "Zamora",
+    "email": "invitadoNestor@gmail.com",
+    "password": "Nestor123",
+    "rol": "invitado"
+  }
+]
